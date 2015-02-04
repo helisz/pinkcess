@@ -1,0 +1,88 @@
+<!--top.mosttop-->
+
+
+<script src="/plugin/js/slider.js"></script>
+<link rel="stylesheet" type="text/css" href="/plugin/default.css">
+<link rel="stylesheet" type="text/css" href="/plugin/fontface.css">
+<style>
+  .main-spliter {
+     width:10px; 
+     background-repeat:repeat-y; 
+     background-image:none;
+     /**url(/images/split.gif);**/
+  }
+</style>
+
+<!--top-->
+<div class="top-wrapper">
+    <div class="header">
+        <a href="/" class="left"><img src="/plugin/img/logo.png" border="0"></a>
+        <div class="right">
+         (#Stores/EasyLoginView NotLoginText="<a href='/login.aspx' >Login</a><a href='/Reg.aspx'>Register</a>"#)
+        (#asp:HyperLink NavigateUrl="/Member/MyHome.aspx" Text="My Account" CssClass="hc"#)     
+        (#asp:HyperLink NavigateUrl="/Cart.aspx" Text="Cart" CssClass="hc"#)(%CartCount%) 
+        </div>
+        <div class="navi trans">
+            <center>
+                    <a id="navi1" href="/">HOME</a>
+                    <a id="navi2" href="/sell/Start.aspx">OPEN A STORE</a>
+                    <a id="navi3" href="/create/default.aspx">DESIGN YOUR OWN</a>
+                    <a id="navi4" href="/market/search.aspx">MARKET PLACE</a>
+                    <a id="navi5" href="/DropShipping">DROP SHIPPING</a>
+                    <a id="navi6" href="/VIPDomainStore">VIP DOMAIN STORE</a>
+                    <a id="navi7" href="/SuperVip">SUPER VIP</a>
+            </center>
+        </div>
+    </div>
+    <div id="ttb"></div>
+</div>
+
+
+<!--top.master - mosttop-->
+<style>
+#gvMenu{border: 1px solid #E0E0E0;width: 180px!important;border-color: #E0E0E0!important;border-width: 1px!important;border-style: solid!important;}
+.menu{border-top:1px solid #E0E0E0;background: #F9F9F9;cursor: pointer;}
+.menu:hover{background: #E5E5E5}
+.menu td{padding: 8px 10px}
+.menu *{font-size: 14px; color: #888!important;font-weight: 600}
+/*.submenu{display: none;}*/
+.submenus td{height:20px;}
+.submenus *{font-size: 13px;}
+.menuitem{color: #888!important;margin: 0 0 0 10px;}
+.menuitem:hover{color: #8BBE44!important}
+.selected-menuitem{font-weight: 600!important;color: #FFF!important;}
+.expand-all{background: #999;border: 1px solid #999;border-bottom: 0;height: 20px;line-height: 20px;color: #FFFFFF;font-weight: bold;text-align: center;cursor: pointer;}
+.expand-all:hover{background: #8BBE44; border: 1px solid #8BBE44;border-bottom: 0;}
+
+</style>
+
+
+<script>
+    $(document).ready(function(){
+        //$('#gvMenu').before("<div class='expand-all'>EXPAND ALL</div>");
+        /*
+        $('.expand-all').click(function(){
+            $('.submenu').css('display','table-row');
+            $('.submenu').find('td').css('height','20px');
+            $(this).hide();
+        });
+        */
+        $('#gvMenu').find('tr').addClass('submenus');
+        $('#gvMenu').find('b').parent().parent('tr').removeClass('submenus').addClass('menu');
+        
+        var sel = $('.selected-menuitem').parent().parent('tr');
+
+        sel.css('background-color', '#57A0CF');
+        sel.css('display','table-row');
+        /*
+        sel.prevUntil('.menu').css('display','table-row');
+        sel.nextUntil('.menu').css('display','table-row');
+
+        $('.menu').click(function(){
+            $(".submenu").hide();
+            $(this).nextUntil('.menu').toggle();
+            $(this).toggleClass('tridown');
+        });
+        */
+    });
+</script>
