@@ -15,14 +15,7 @@ div.rateit div.rateit-hover, div.rateit div.rateit-selected {position: absolute;
 .product-preview-img img{width:400px;height:400px}
 .product-preview-simg{margin-top:5px}
 .product-preview-simg img{float:left;width:60px;height:60px;border:1px solid #F0F0F0;margin:0 5px 5px 0}
-.product-info {
-float: right;
-width: 620px;
-padding: 20px 0 0px 20px;
-margin-top: 30px;
-background-color: #ebebeb;
-height:590px;
-}
+.product-info {float: right;width: 620px;padding: 20px 0 0px 20px;margin-top: 30px; background-color: #ebebeb; height:590px; }
 .product-title{line-height: 30px; color:#333;font-size:28px;padding:0 20px 0px 0; font-family:'highway_gothic_narrowregular', Arial, Helvetica, sans-serif;height:100px;display: flex;}
 .product-infolist ul{list-style:none;margin:0;padding:0}
 .product-infolist ul li{height:20px;line-height:20px; font-size: 1.1em;margin: 10px 0;}
