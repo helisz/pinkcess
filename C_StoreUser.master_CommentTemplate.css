@@ -1,0 +1,98 @@
+<style>
+
+.yesno{display:inline;color:#ccc; float:left;}
+.yesno-result{display:inline-block;background-color:#FF2D77;color:#fff;padding:0 10px}
+.sitelike{display:inline;margin-right:5px;background: #eee;color:#666;cursor:pointer;padding:2px 5px;-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	-ms-transition: all .2s ease;
+	transition: all .2s ease;}
+
+.sitelike:hover{color:#fff;background:#FF2D77}
+
+
+
+.attachtitle{color:#ccc;border-top:1px solid #dcd6d8;margin:10px 0 8px}
+.attach{width:300px;margin:10px 0}
+.attach div{text-align:center;width:64px;margin-right:5px;float:left}
+.attach div div{width:64px;height:auto;background-color:#FFF;border:solid 1px #ccc;padding:2px 0}
+
+.comment-left{float:left; width:160px;}
+.comment-right{float:right; width:980px;}
+
+
+
+
+.comment-label{padding-right: 10px;color:#AAA;font-family: 'Open Sans', sans-serif;font-size:1em;margin-bottom: 10px;}
+.comment-text{font-size: 1.1em;float:left;display:block;color:#666;font-family: 'Open Sans', sans-serif;text-align:justify; line-height: 2em;margin-bottom: 30px;width: 90%;}
+.comment-wrapper{overflow:hidden;border-bottom:1px solid #EEE;padding:20px;background-color:#f3f3f3;}
+.comment-title{font-family: 'highway gothic', sans-serif;font-size:19px;color:#666;width:500px;}
+.comment-info{font-family: 'Open Sans', sans-serif;color: #ccc;
+font-size: 10px;padding: 4px 0;}
+.comment-username{color:#444444;font-family: Arial, sans-serif;font-size:12px;text-decoration:none}
+.comment-wrapper b{color:#AAA; font-weight: normal;}
+.comment-avatar{width:80px;height:80px;background:#DDD}
+.comment-isuseful-q{height: 30px;margin: 10px 0;display: inline-block;padding: 0 0 0 15px;color: #fff;font-size: 1em;background: #21AAE2;line-height: 30px;}
+.comment-isuseful-q button{cursor: pointer; border: 0; padding: 0 10px;line-height: 30px;margin:0; background: #21AAE2; color:#FFF;font-weight: 800}
+.comment-isuseful-a{height: 30px;margin: 10px 0;display: inline-block;padding: 0 15px;color: #fff;font-size: 1em;background: #3D916F;line-height: 30px;}
+.comment-button{cursor: pointer;color: #666;margin-left: 4px;text-decoration: none;background: #F5F5F5;padding: 1px 10px;border-radius: 3px;-webkit-border: 1px solid #DDD;-moz-border: 1px solid #DDD;border: 1px solid #DDD;float: right;}
+.comment-button:hover{background: #FF2D77; color: #FFF; border:1px solid #FF2D77;}
+.comment-summary-outter{border:1px solid #FF2D77;width:120px;height:12px;margin-top:-2px;padding:1px}
+.comment-summary-inner{height:100%;background-color:#FF2D77}
+.comment-summary-item{margin-top:5px}
+.comment-summary-item *{float:left;height:15px;margin-right:5px}
+.comment-total-review{height:26px;line-height:26px}
+.comment-total-review .comment-span{float:left;margin-top:-5px}
+.comment-summary-wrapper{margin-top:5px;margin-bottom:5px;}
+.comment-desc > div{margin-top:10px;margin-bottom:15px}
+.comment-rating,.comment-recommend{float:left;width:220px;height:26px;margin-top:5px;margin-bottom:0}
+.comment-rating .attr-name{font-weight:normal;height:26px;padding-top:1px;padding-right:2px}
+
+.comment-number,.comment-summary-star,.attr-name{font-weight:bold}
+.comment-total-review .rateit,.comment-rating > *{float:left}
+.comment-altrowstyle {background: #FFF !important}
+
+
+
+
+@media screen and (max-width: 1280px) {
+    .comment-right{ width:800px;}
+    .comment-wrapper{width:1000px;}
+}
+
+
+</style>
+<!--content of review-->
+<div class="comment-wrapper">
+  <!--leftside-->
+  <div class="comment-left">
+        
+    <div class="comment-avatar">
+(#UserImage#)
+</div><br/>
+    <div class="comment-username" >(#UserLink#)</div>
+    <div style="margin-top:0px">(#Location#)</div>
+    </div>
+  <!--rightside-->
+  <div class="comment-right" >
+      <div style="width:100%">
+          <div class="comment-title"> (#CommentTitle#)</div>
+          <div class="comment-info">#(#Number#) Posted at <span class='comment-time'>(#CommentTime#)
+        </span>
+          (#DeleteButton#)(#UploadVideoButton#)(#UploadAttachButton#)
+          </div>
+          <div class="comment-text"><!--(#CommentText#)-->
+            
+            (#Comments#) <br/>(#Pros#)  <br/>(#Cons#)
+
+          <div class='attach'>(#AttachedFile#)</div>
+         <div class="attachtitle"></div>
+          <div class="yesno">Is this review helpful?&nbsp;&nbsp;(#YesNo#) </div>
+          <span style="color:#ccc; float:left; margin-left:10px;">(#Helpful#)</span>
+
+          </div>
+          
+      </div>
+  </div>
+</div>
+<!--end of review-->
