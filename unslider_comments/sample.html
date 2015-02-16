@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>sample</title>
+
+	<link rel="stylesheet" type="text/css" href="slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick-theme.css"/>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="slick.min.js"></script>
+	<style>
+		body{
+			background: #555;
+		}
+		.theitem{
+			width: 96%;
+			margin: 2%; 
+			height: 300px; 
+			padding: 10px; 
+			background: #F5F5F5;
+			box-sizing: border-box;
+		}
+		#commentSlider{
+			width: 800px;
+			border:5px solid #CCC;
+		}
+		#commentSlider td{
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<table cellspacing="0" id="cphMain_chCenter_ctl33_gvComments">
+		<tbody id="commentSlider">
+			<tr>
+				<th scope="col">Comments</th>
+			</tr>
+			<tr>
+				<td>
+					<div class="theitem">
+						something inside here
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="theitem">
+						something inside here
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="theitem">
+						something inside here
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<script>
+		$(document).ready(function(){
+			$('#commentSlider').slick({
+				arrows: true
+			});
+		});
+
+	</script>
+</body>
+</html>
