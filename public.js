@@ -95,6 +95,8 @@ window.onload = function () {
         var zwidth = 0;
         if ($(window).width() > 1280) {
             zwidth = ( $(window).width() - 1180 ) / 2;
+        } else if ($(window).width() > 1000 && $(window).width() <= 1280) {
+            zwidth = ( $(window).width() - 1000 ) / 2;
         }
         var topNum = document.documentElement.scrollTop || document.body.scrollTop;
         var oEvent = ev || event;
