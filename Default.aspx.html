@@ -1,0 +1,95 @@
+<style>
+	.maxwidth > hr{ display:none;}
+	#my_popup {width: 694px; height: 476px; background: url("/contents/pinkcess/img/sub-popup.png"); }
+	.my_popup_close{ background: url("/contents/pinkcess/img/closeBtn.png"); border: 0; width: 15px; height: 15px; position: absolute; top: 2px; right: 2px; cursor: pointer;}
+	.my_popup_close:hover{background-position: 0 -15px}
+	#my_popup_sub{font-family: 'highway_gothic_narrowregular', Arial, Helvetica, sans-serif;color: #FFF; background-color: #ff2d77; display: block; width: 200px; margin: 260px auto; text-align: center; height: 36px; line-height: 36px; font-size: 17px; cursor: pointer;}
+	#my_popup_sub:hover {background-color: #ff6F95; }
+
+</style>
+
+<link href="/Contents/pinkcess/style/unslider.css" type="text/css" rel="stylesheet" media="all" />
+<script src="/Contents/pinkcess/js/unslider.min.js"></script>
+
+<script>
+	$(function() {$(".banner").insertAfter(".header-wrapper-white");});
+	$(function() {$(".indexbutton-wrapper").insertAfter(".banner");});
+	$(document).ready(function(){
+		$(function() {
+			$(function() {
+				$('.banner').unslider({fluid: true, dots:true});
+
+			});
+		});
+	});
+</script>
+
+
+
+<!--banner-->
+
+<div class="banner">
+	<ul>
+		<li class="banner0"><li class="banner1"></li><li class="banner2"></li><li class="banner3"></li>        
+	</ul>
+</div>
+<div class="indexbutton-wrapper" style="margin-bottom:-100px;">
+	<div class="indexbutton">
+		<a href="/about.aspx"><img src="Contents/pinkcess/img/button1.jpg" /></a>
+	</div>
+	<div class="indexbutton">
+		<a href="#"><img src="Contents/pinkcess/img/button2.jpg" /></a>
+	</div>
+	<div class="indexbutton">
+		<a href="/socialmedia.html"><img src="Contents/pinkcess/img/button3.jpg" /></a>
+	</div>
+	<div class="indexbutton">
+		<a href="/howitworks.html"><img src="Contents/pinkcess/img/button4.jpg" /></a>
+	</div>
+</div>
+
+<!----------------------------------SUBSCRIBE POP UP--------------------------------------->
+
+<!-- Add an optional button to open the popup 
+<button class="my_popup_open">Open popup</button>-->
+
+<!-- Add content to the popup -->
+<div id="my_popup">
+	<!--
+	(#JNewsLetter SubmitButtonId="btnNewsLetter" EmailBoxId="inputEmailBox" OKDivId="divSubscribeOK" AreaId="SubResult"#)
+	<input type="text" name="subscribe" id="inputEmailBox" value="example@example.com" onfocus="if(this.value=='example@example.com')this.value=''" onblur="if(this.value=='')this.value='example@example.com'" />
+	<input type="button" class="site-button" id="btnNewsLetter" value="Submit">
+	-->
+	<!-- Add an optional button to close the popup -->
+	<div id="my_popup_sub">SUBSCRIBE</div>
+	<button class="my_popup_close"></button>
+
+</div>
+
+<!-- Include jQuery Popup Overlay -->
+<script src="/contents/pinkcess/js/jquery.popupoverlay.js"></script>
+
+
+<!-- check cookie popup once -->
+<script>
+	$(document).ready(function() {
+
+		if (document.cookie.indexOf("newsletter")<=0){
+			// Initialize the plugin
+			$('#my_popup').show().popup();
+			document.cookie="newsletter=1";
+		}
+
+		$("#my_popup_sub").click(function(){
+			$("#my_popup_background").fadeOut(100);
+			$("#my_popup_wrapper").fadeOut(100);
+			$("html, body").animate({ scrollTop: $(document).height() }, 1000);
+		});
+	});	
+
+</script>
+
+
+<!---------------------------------SUBSCRIBE POP UP END------------------------------------>
+
+

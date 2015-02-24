@@ -15,7 +15,14 @@ div.rateit div.rateit-hover, div.rateit div.rateit-selected {position: absolute;
 .product-preview-img img{width:400px;height:400px}
 .product-preview-simg{margin-top:5px}
 .product-preview-simg img{float:left;width:60px;height:60px;border:1px solid #F0F0F0;margin:0 5px 5px 0}
-.product-info {float: right;width: 620px;padding: 20px 0 0px 20px;margin-top: 30px; background-color: #ebebeb; height:590px; }
+.product-info {
+float: right;
+width: 620px;
+padding: 20px 0 0px 20px;
+margin-top: 30px;
+background-color: #ebebeb;
+height:590px;
+}
 .product-title{line-height: 30px; color:#333;font-size:28px;padding:0 20px 0px 0; font-family:'highway_gothic_narrowregular', Arial, Helvetica, sans-serif;height:100px;display: flex;}
 .product-infolist ul{list-style:none;margin:0;padding:0}
 .product-infolist ul li{height:20px;line-height:20px; font-size: 1.1em;margin: 10px 0;}
@@ -114,11 +121,12 @@ color: #fff !important;}
 .hidden { display: none; }
 .block { display: block; }
 .ke_m2con { height: 260px; width: 400px; margin:0}
-.ke_m2pc_con ul li { border: 1px solid #CCC; cursor: pointer; display: inline; float: left; height: 60px; margin: 0 0px 10px 0px;width: 60px;position: relative; transition: opacity .25s ease-in-out;
+.ke_m2pc_con ul li { border: 1px solid #CCC; cursor: pointer; display: inline; float: left; height: 90px; margin: 0 0px 10px 0px;width: 60px;position: relative; transition: opacity .25s ease-in-out;
 -moz-transition: opacity .25s ease-in-out;
 -webkit-transition: opacity .25s ease-in-out;
 background-color:#ff2d77;
 opacity:0.5;}
+.ke_m2pc_con ul li img { height: 100%; }
 
 .ke_m2pc_con ul li:hover{opacity:1; }
 
@@ -143,7 +151,7 @@ float: left; }
 #ink_showImg .float_layer { width: 100px; height: 100px; border: 1px solid #000; background: #fff; filter: alpha(opacity: 30); opacity: 0.3; position: absolute; top: 0; left: 0; display:none; }
 #ink_showImg .mark {width:100%; height:100%; position:absolute; z-index:2; left:0px; top:0px; background:red; filter:alpha(opacity:0); opacity:0;}
 #ink_showImg .big_pic { position: absolute; top: 0px; left: 410px; width:400px; height:400px; overflow:hidden;  display:none; }
-#ink_showImg .big_pic img { position:absolute; top: -30px; left: -80px; z-index:10000; width: 720px; height: 720px;}
+#ink_showImg .big_pic img { position:absolute; top: -30px; left: -80px; z-index:10000; width: 640px; height: 960px;}
 #ink_showImg .small_pic img{ width: 407px; height: 610px;}
 
 
