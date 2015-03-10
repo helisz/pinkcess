@@ -1,6 +1,7 @@
 <!-- StoreProdct.Center -->
 <script src="/Contents/pinkcess/js/public.js" language="javascript" type="text/javascript"></script>
 
+
 <!--LINE-1-->
 <div class="maxwidth">
 </div>
@@ -45,7 +46,7 @@
 				<div class="product-title">
 					<div style="width:620px;margin:auto 0;font-size: 28px;">
 						(#StoreProductName#)
-						<span class="product-infolist-price">$12.99</span>
+						<span class="product-infolist-price">(#BasePrice#)</span>
 					</div>
 
 
@@ -77,14 +78,16 @@
 				        	<span class="product-infolist-tag">Dispatch</span>
 				        	<span class="product-infolist-content">Shipping in (#ShippingTime#) hours</span>
 				        </li>
-    				</ul>-->
-			    	<hr class="hr1">
+				    </ul>-->
+				    <hr class="hr1">
 				    <!-- PERSONALIZE-->
 				    <!--(#Personalize#)123(#CustomLink#)  321-->
 				    <div style="margin-top: 5px;">
 				    	<span class="product-infolist-tag">Quantity</span>
 				    	<span>(#QuantityBox#)</span>
 				    </div>
+
+				    (#ProductSize#)
 
 				    <!-- ATC -->
 				    <div style="margin-top: 20px;overflow:hidden; width:450px;">
@@ -100,50 +103,86 @@
 				    		<div id="tab1" class="tab-wrapper">
 				    			<ul class="tab-title">
 				    				<li class="tab1 active"><span>Description</span></li>
-				    				<li class="tab2"><span>Details</span></li>
+				    				<li class="tab2"><span>Size Chart</span></li>
+				    				<li class="tab3"><span>Shipping Fees</span></li>
 
 				    			</ul>
 				    			<div class="tab-container">
 				    				<div class="tab1 active" style="position:relative">
 
-				    					<h3><u>Product Description</u></h3>
-				    					<div class="product-detail-wrapper">
-				    						<div class="product-detail-text">
-				    							(#ProductDesc#) 
-				    						</div>
-				    					</div>
-				    				</div>
 
-				    				<div class="tab2">
-				    					<h3><u>Specifications</u></h3>
-				    					<div class="product-spec" style="width:560px;">
-				    						<table width="100%">
-				    							<col width="20%">
-				    							<col width="80%">
-				    							<tbody>
-				    								<tr>
-				    									<td><b>Dimensions</b></td>
-				    									<td>(#Dimension#)</td>
-				    								</tr>
-				    								<tr>
-				    									<td><b>Weight</b></td>
-				    									<td>(#Weight#)</td>
-				    								</tr>
-				    								<tr>
-				    									<td><b>Original Packing</b></td>
-				    									<td>(#Packing#)</td>
-				    								</tr>   
-				    							</tbody>
-				    						</table>
-				    					</div>
-									</div>
-								</div>
+<!--
+				    					<h3><u>Product Description</u>
 
-    							<!--1tab end-->
+</h3>
+
+-->
+<div class="product-detail-wrapper">
+	<div class="product-detail-text">
+		(#ProductDesc#) 
+	</div>
+</div>
+</div>
+
+<div class="tab2">
+	<h3><u>Size Chart</u></h3>
+	<div class="product-spec" style="width:560px;">
+		<table width="100%">
+			<col width="20%">
+			<col width="80%">
+			<tbody>
+				<tr>
+					<td><b>Dimensions</b></td>
+					<td>(#Dimension#)</td>
+				</tr>
+				<tr>
+					<td><b>Weight</b></td>
+					<td>(#Weight#)</td>
+				</tr>
+				<tr>
+					<td><b>Original Packing</b></td>
+					<td>(#Packing#)</td>
+				</tr>   
+			</tbody>
+		</table>
+	</div>
+</div>
 
 
-    							<!------------DELETED GUARANTEE---------------------------->
-								<!-- like text is changed.-->
+
+
+
+
+
+
+
+
+<div class="tab3">
+	<h3><u>Shipping Fees</u></h3>
+	<div class="product-spec" style="width:560px;">
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<!--1tab end-->
+
+
+<!------------DELETED GUARANTEE---------------------------->
+<!-- like text is changed.-->
 								<!--product secure
 								<table width="300" border="0" cellspacing="0" cellpadding="0">
 								<tr>
@@ -158,11 +197,11 @@
 								    </td>
 								</tr>
 								</table>
-								-->
-							</div>
+							-->
 						</div>
-						<!--END RIGHT: prduct information-->
 					</div>
+					<!--END RIGHT: prduct information-->
+				</div>
 				<div class="detail-hashtag">
 					<img src="/contents/pinkcess/img/hashtag-icon.png" style="margin-left: 12px; float:left;"><u>purple</u>&nbsp&nbsp;&nbsp;<u>skater dress</u>&nbsp;&nbsp;&nbsp<u>pattern</u>
 				</div>
@@ -195,10 +234,11 @@
 	<!-- INSTAGRAM TAG -->
 	<div style="margin-bottom:30px; float:left;">
 		<div class="review-title">
-			Share your outfits by tagging 
+			Share your outfits by tagging (#SocialTagName#)
 		</div>
 		(#SocialTag#)
 	</div>
+
 	<!-- END INSTAGRAM TAG-->
 
 
@@ -218,15 +258,40 @@
 	</div>
 	<!-- END CUSTOMER REVIEWS -->
 
-	<!--sec-02-->
+	<!--sec-maylike-->
 	<div style="margin-bottom:30px; float:left;">
 		<div class="review-title">You might also like</div>
 		<div class="tab-container-bottom">
-			<div class="p5">
-				<ul>
-					(#Stores/StoreProductGroupControl Count="6" GroupType="RecommendByPurchased" TemplateName="Big"#)
-				</ul>
+			<div class="p5" class="owl-carousel">
+				(#Stores/StoreProductGroupControl Count="6" GroupType="RecommendByPurchased" TemplateName="Big"#)
+			</div>
+			<div class="p5-ctr">
+				<a class="btn next">Next</a>
+				<a class="btn prev">Previous</a>
 			</div>
 		</div>
 	</div>
+	<script>
+		$(document).ready(function() {
+			var owl_3 = $(".p5");
+
+			owl_3.owlCarousel({
+				items : 6,
+				itemsDesktop : [1280,5], 
+				itemsDesktopSmall : [1000,5],
+				itemsTablet: [600,5], 
+				itemsMobile : false, 
+				autoPlay : true
+
+			});
+
+			$(".p5-ctr .next").click(function(){
+				owl_3.trigger('owl.next');
+			})
+			$(".p5-ctr .prev").click(function(){
+				owl_3.trigger('owl.prev');
+			})
+
+		});
+	</script>
 </div>
